@@ -17,7 +17,6 @@ func GenerateNewKeypair() (sk *bls.SecretKey, pubKey types.PublicKey, err error)
 }
 
 func SecretKeyFromBytes(skBytes []byte) (sk *bls.SecretKey, pubKey types.PublicKey, err error) {
-
 	sk, err = bls.SecretKeyFromBytes(skBytes[:])
 	if err != nil {
 		return nil, types.PublicKey{}, err
