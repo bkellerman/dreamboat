@@ -223,6 +223,8 @@ func setup() cli.BeforeFunc {
 			return err
 		}
 
+		println(pk)
+
 		config = pkg.Config{
 			Log:                      logger(c),
 			RelayQueueProcessingSize: c.Uint64("relay-validator-queue-size"),
