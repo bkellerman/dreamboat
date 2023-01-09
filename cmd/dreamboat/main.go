@@ -223,7 +223,7 @@ func setup() cli.BeforeFunc {
 			return err
 		}
 
-		println(pk)
+		fmt.Printf("%v\n", pk)
 
 		config = pkg.Config{
 			Log:                      logger(c),
