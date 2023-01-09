@@ -223,7 +223,7 @@ func setup() cli.BeforeFunc {
 			return err
 		}
 
-		fmt.Printf("%v\n", pk)
+		fmt.Printf("%v %v %v\n", c.String("secretKey"), skBytes, pk)
 
 		config = pkg.Config{
 			Log:                      logger(c),
