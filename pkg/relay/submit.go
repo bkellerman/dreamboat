@@ -233,7 +233,7 @@ func prepareContents(submitBlockRequest *types.BuilderSubmitBlockRequest, conf R
 				BlockNumber: s.Payload.Payload.Data.BlockNumber,
 				NumTx:       uint64(len(s.Payload.Payload.Data.Transactions)),
 			},
-			Timestamp:   uint64(time.Now().UnixMilli() / 1_000),
+			Timestamp:   uint64(time.Now().Round(time.Second).Unix()),
 			TimestampMs: uint64(time.Now().UnixMilli()),
 		},
 	}
